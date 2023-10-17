@@ -8,16 +8,56 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home.index') }}">@lang('public.Home')</a>
-                </li>
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">User Management</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('role.index') }}">Roles</a>
                         <a class="dropdown-item" href="{{ route('employee.index') }}">Employee</a>
                         <a class="dropdown-item" href="{{ route('office.index') }}">Office</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">System Setup</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('role.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('employee.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('office.index') }}">Test</a>
+                </li> --}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Student Management</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('role.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('employee.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('office.index') }}">Test</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Course Management</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('role.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('employee.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('office.index') }}">Test</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Faculty Management</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('role.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('employee.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('office.index') }}">Test</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Enrollment Management</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('role.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('employee.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('office.index') }}">Test</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Report</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('role.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('employee.index') }}">Test</a>
+                        <a class="dropdown-item" href="{{ route('office.index') }}">Test</a>
+                </li>
+
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ route('employee.index') }}">@lang('public.Employee')</a>
                 </li>
@@ -32,8 +72,15 @@
                 @csrf
                 @method('DELETE')
                 <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li>
+                        <button type="button" class="btn btn-light position-relative">
+                            <img src="https://cdn.icon-icons.com/icons2/2768/PNG/512/massage_icon_176650.png" style="height: 2rem;" class="img-fluid " alt="..."><span class="position-absolute translate-middle p-2 bg-danger border border-light rounded-circle">
+                              <span class="visually-hidden">New alerts</span>
+                            </span>
+                          </button>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">@lang('public.Welcome'), {{ Auth::user()->name }}</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"><img src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png" style="height: 2rem;" class="img-fluid " alt="..."> </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('profile.index') }}">Profile</a>
                             <a class="dropdown-item" href="{{ route('office.index') }}">Change Password</a>
