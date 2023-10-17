@@ -2,7 +2,9 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home.index') }}">Test</a>
+        <a class="navbar-brand" href="{{ route('home.index') }}">
+            <img src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?w=826&t=st=1697546529~exp=1697547129~hmac=93376d06edca82cbb1937af986df221e70813f985e73d79fb846fd199d99539d" style="height: 40px;"  alt="...">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
