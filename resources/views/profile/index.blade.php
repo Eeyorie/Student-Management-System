@@ -11,7 +11,7 @@
     <div class="row">
         <div>
             <label>Name</label>
-            <input name="name">
+            <input name="name" >
         </div>
         <div>
             <br>
@@ -20,5 +20,5 @@
         </div>
     </div>
 </body>
-</html> 
+</html>
 @endsection
