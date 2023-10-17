@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\LoginController;
@@ -21,19 +22,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// vue js index
+// Route::get('/', function () {
+//         return view('welcome');
+//     });
+
 Route::get('/', function () {
     return view('login.index');
 });
-
-// Route::get('/test', function () {
-//     return view('test');
-// });
 
 Route::get('/test', [TestController::class, 'test'])->name('test');
 
 Route::get('locale/{lange}', [LocalizationController::class, 'setLang'])->name('lang');
 
-// Route::get('/employee', [EmployeeController::class, 'employee'])->name('employee');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
@@ -42,6 +43,7 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::resource('/home', HomeController::class);
     Route::resource('/employee', EmployeeController::class);
     Route::resource('/role', RoleController::class);
     Route::resource('/office', OfficeController::class);
@@ -53,4 +55,3 @@ Route::group(['middleware' => 'auth'], function () {
 //Localization Route
 
 
- 
