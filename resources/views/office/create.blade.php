@@ -1,6 +1,6 @@
 {{-- //resources/views/product/create.blade.php --}}
 @extends('layouts.app')
- 
+
 @section('body')
     <h1 class="mb-0">Office</h1>
     <hr />
@@ -15,7 +15,7 @@
                     is-invalid
                 @enderror" placeholder="Name">
                 <div class="invalid-feedback">
-                    @error('office_name') 
+                    @error('office_name')
                     {{$message}}
                     @enderror
                 </div>
@@ -27,7 +27,7 @@
                     is-invalid
                 @enderror" placeholder="Address">
                 <div class="invalid-feedback">
-                    @error('office_address') 
+                    @error('office_address')
                     {{$message}}
                     @enderror
                 </div>
@@ -42,7 +42,7 @@
                     is-invalid
                 @enderror" placeholder="Contact Number">
                 <div class="invalid-feedback">
-                    @error('office_number') 
+                    @error('office_number')
                     {{$message}}
                     @enderror
                 </div>

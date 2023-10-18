@@ -1149,9 +1149,10 @@ return [
         "Created At" => "Created At",
         "Updated At" => "Updated At",
         "Employee Detail" => "Employee Detail",
-        "Employee Deleted Successfully" => "Employee Deleted Successfully"
-        
-    
+        "Employee Deleted Successfully" => "Employee Deleted Successfully",
+        "Student Management" => "Student Management"
+
+
 ];
 
 
