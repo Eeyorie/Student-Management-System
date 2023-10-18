@@ -22,7 +22,7 @@ class StoreEmployeeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'FirstName'=>['required', 'min:2', 'alpha'],
+            'FirstName'=>['required'],
             'LastName'=>['required'],
             'employee_roles_id'=>['required'],
             'office_id'=>['required'],

@@ -1,5 +1,5 @@
 <?php
- 
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEmployeeRequest;
@@ -9,7 +9,7 @@ use App\Models\Office;
 use App\Models\EmployeeRole;
 use App\Models\Role;
 use Illuminate\Http\Request;
- 
+
 class EmployeeController extends Controller
 {
     /**
@@ -18,10 +18,10 @@ class EmployeeController extends Controller
     public function index()
     {
         $employee = Employee::orderBy('created_at', 'DESC')->get();
- 
+
         return view('employee.index', compact('employee'));
     }
- 
+
     /**
      * Show the form for creating a new resource.
      */
@@ -32,7 +32,7 @@ class EmployeeController extends Controller
 
         return view('employee.create', compact('roles','offices'));
     }
- 
+
     /**
      * Store a newly created resource in storage.
      */
@@ -41,11 +41,11 @@ class EmployeeController extends Controller
         // dd($request->all());
         // Employee::create($request->all());
         $employee=Employee::create($request->validated());
-        
+
 
         return to_route('employee.index', compact('employee'))->with('success', 'employee added successfully');
     }
- 
+
     /**
      * Display the specified resource.
      */
@@ -54,38 +54,38 @@ class EmployeeController extends Controller
 
         return view('employee.show', compact('employee'));
     }
- 
+
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Employee $employee)
     {
         // $employee = Employee::findOrFail($id);
- 
+
         return view('employee.edit', compact('employee'));
     }
- 
+
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Employee $employee)
     {
         // $employee = Employee::findOrFail($id);
- 
+
         $employee->update($request->all());
- 
+
         return redirect()->route('employee.index')->with('success', 'employee updated successfully');
     }
- 
+
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Employee $employee)
     {
         // $employee = Employee::findOrFail($id);
- 
+
         $employee->delete();
- 
+
         return redirect()->route('employee.index')->with('success', 'employee deleted successfully');
     }
 }

@@ -32,56 +32,53 @@ class StudentController extends Controller
     // /**
     //  * Store a newly created resource in storage.
     //  */
-    // public function store(StoreStudentRequest $request)
-    // {
-    //     // dd($request->all());
-    //     // Employee::create($request->all());
-    //     $employee=Student::create($request->validated());
+    public function store(StoreStudentRequest $request)
+    {
+        $student = Student::create($request->validated());
 
-
-    //     return to_route('employee.index', compact('employee'))->with('success', 'employee added successfully');
-    // }
+        return redirect()->route('student.index')->with('success', 'Student added successfully');
+    }
 
     // /**
     //  * Display the specified resource.
     //  */
-    // public function show(Student $employee)
-    // {
+    public function show(Student $student)
+    {
 
-    //     return view('employee.show', compact('employee'));
-    // }
+        return view('student.show', compact('student'));
+    }
 
     // /**
     //  * Show the form for editing the specified resource.
     //  */
-    // public function edit(Student $employee)
-    // {
-    //     // $employee = Employee::findOrFail($id);
+    public function edit(Student $student)
+    {
+        // $student = Student::findOrFail($id);
 
-    //     return view('employee.edit', compact('employee'));
-    // }
+        return view('student.edit', compact('student'));
+    }
 
     // /**
     //  * Update the specified resource in storage.
     //  */
-    // public function update(Request $request, Student $employee)
-    // {
-    //     // $employee = Employee::findOrFail($id);
+    public function update(Request $request, Student $student)
+    {
+        // $employee = Employee::findOrFail($id);
 
-    //     $employee->update($request->all());
+        $student->update($request->all());
 
-    //     return redirect()->route('employee.index')->with('success', 'employee updated successfully');
-    // }
+        return redirect()->route('student.index')->with('success', 'student updated successfully');
+    }
 
     // /**
     //  * Remove the specified resource from storage.
     //  */
-    // public function destroy(Student $employee)
-    // {
-    //     // $employee = Employee::findOrFail($id);
+    public function destroy(Student $student)
+    {
+        // $employee = Employee::findOrFail($id);
 
-    //     $employee->delete();
+        $student->delete();
 
-    //     return redirect()->route('employee.index')->with('success', 'employee deleted successfully');
-    // }
+        return redirect()->route('student.index')->with('success', 'student deleted successfully');
+    }
 }

@@ -17,9 +17,9 @@
                 <th>#</th>
                 <th>@lang('public.First Name')</th>
                 <th>@lang('public.Last Name')</th>
-                <th>Year</th>
-                <th>Course</th>
-                <th>Department</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Enrollment Date</th>
                 <th></th>
             </tr>
         </thead>
@@ -28,16 +28,16 @@
                 @foreach($student as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
-                        <td class="align-middle">{{ $rs->FirstName }}</td>
-                        <td class="align-middle">{{ $rs->LastName }}</td>
-                        <td class="align-middle">{{ $rs->role->role_name }}</td>
-                        <td class="align-middle">{{ $rs->office->office_name }}</td>
-                        <td class="align-middle">{{ $rs->office->office_name }}</td>
+                        <td class="align-middle">{{ $rs->first_name }}</td>
+                        <td class="align-middle">{{ $rs->last_name }}</td>
+                        <td class="align-middle">{{ $rs->gender }}</td>
+                        <td class="align-middle">{{ $rs->email }}</td>
+                        <td class="align-middle">{{ $rs->enrollment_date }}</td>
                         <td class="align-middle">
                             <div class="btn-group " role="group" aria-label="Basic example">
-                                <a href="{{ route('employee.show', $rs->id) }}" type="button" class="btn btn-secondary">@lang('public.Detail')</a>
-                                <a href="{{ route('employee.edit', $rs->id)}}" type="button" class="btn btn-warning">@lang('public.Edit')</a>
-                                <form action="{{ route('employee.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
+                                <a href="{{ route('student.show', $rs->id) }}" type="button" class="btn btn-secondary">@lang('public.Detail')</a>
+                                <a href="{{ route('student.edit', $rs->id)}}" type="button" class="btn btn-warning">@lang('public.Edit')</a>
+                                <form action="{{ route('student.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger m-0">@lang('public.Delete')</button>
