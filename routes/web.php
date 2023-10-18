@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +46,7 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('/home', HomeController::class);
     Route::resource('/employee', EmployeeController::class);
+    Route::resource('/student', StudentController::class);
     Route::resource('/role', RoleController::class);
     Route::resource('/office', OfficeController::class);
     Route::resource('/profile', ProfileController::class);

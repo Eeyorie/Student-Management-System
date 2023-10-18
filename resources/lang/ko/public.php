@@ -1149,6 +1149,7 @@ return[
     "Created At" => "생성 날짜",
     "Updated At" => "업데이트 날짜",
     "Employee Detail" => "직원 세부정보",
-    "success" => "직원이 성공적으로 삭제되었습니다."
+    "success" => "직원이 성공적으로 삭제되었습니다.",
+    "Student Management" => "학생관리"
 ];
 ?>
