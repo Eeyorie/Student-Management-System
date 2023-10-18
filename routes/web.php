@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\RoleController;
@@ -45,6 +46,7 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('/home', HomeController::class);
+    Route::resource('/faculty', FacultyController::class);
     Route::resource('/employee', EmployeeController::class);
     Route::resource('/student', StudentController::class);
     Route::resource('/role', RoleController::class);
