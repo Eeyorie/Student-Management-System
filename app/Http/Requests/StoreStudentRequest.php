@@ -11,7 +11,7 @@ class StoreStudentRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -19,14 +19,15 @@ class StoreStudentRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
+
     public function rules(): array
     {
         return [
-            'first_name'=>['required', 'min:2', 'alpha'],
+            'first_name'=>['required'],
             'last_name'=>['required'],
             'date_of_birth'=>['required'],
             'email'=>['required'],
-            'phone_number'=>['required', 'min:2', 'alpha'],
+            'phone_number'=>['required'],
             'gender'=>['required'],
             'address'=>['required'],
             'enrollment_date'=>['required'],
