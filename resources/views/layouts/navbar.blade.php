@@ -27,9 +27,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Administrator</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('student.index') }}">Student Details</a>
+                        <a class="dropdown-item" href="{{ route('student.index') }}">Student Management</a>
                         <a class="dropdown-item" href="{{ route('employee.index') }}">Course Management</a>
-                        <a class="dropdown-item" href="{{ route('office.index') }}">Faculty Management</a>
+                        <a class="dropdown-item" href="{{ route('faculty.index') }}">Faculty Management</a>
                         <a class="dropdown-item" href="{{ route('student.index') }}">Enrollment Management</a>
                         <a class="dropdown-item" href="{{ route('employee.index') }}">Report</a>
                 </li>

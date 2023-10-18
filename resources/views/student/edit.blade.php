@@ -6,6 +6,7 @@
     <hr />
     <form action="{{ route('student.update', $student->id) }}" method="POST">
         @csrf
+        @method('PUT')
         <div class="row mb-3">
             {{-- <div class="col">
                 <input type="text" name="title" class="form-control" placeholder="Title">
