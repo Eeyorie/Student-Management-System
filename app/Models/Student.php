@@ -22,4 +22,9 @@ class Student extends Model
         'guardian_email',
         'guardian_phone_number',
     ];
+
+    public function enrollments()
+{
+    return $this->hasMany(Enrollment::class, 'student_id');
+}
 }

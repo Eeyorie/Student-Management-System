@@ -30,7 +30,7 @@
                         <a class="dropdown-item" href="{{ route('student.index') }}">Student Management</a>
                         <a class="dropdown-item" href="{{ route('course.index') }}">Course Management</a>
                         <a class="dropdown-item" href="{{ route('faculty.index') }}">Faculty Management</a>
-                        <a class="dropdown-item" href="{{ route('student.index') }}">Enrollment Management</a>
+                        <a class="dropdown-item" href="{{ route('enrollment.index') }}">Enrollment Management</a>
                         <a class="dropdown-item" href="{{ route('employee.index') }}">Report</a>
                 </li>
 

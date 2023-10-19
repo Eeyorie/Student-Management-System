@@ -14,9 +14,10 @@ class CourseController extends Controller
      */
     public function index()
     {
+        $faculty=Faculty::all();
         $course = Course::orderBy('created_at', 'DESC')->get();
 
-        return view('course.index', compact('course'));
+        return view('course.index', compact('course','faculty'));
     }
 
     /**
