@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\EnrollmentController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\TestController;
@@ -50,6 +51,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/faculty', FacultyController::class);
     Route::resource('/course', CourseController::class);
     Route::resource('/employee', EmployeeController::class);
+    Route::resource('/enrollment', EnrollmentController::class);
     Route::resource('/student', StudentController::class);
     Route::resource('/role', RoleController::class);
     Route::resource('/office', OfficeController::class);
