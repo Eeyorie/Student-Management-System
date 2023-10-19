@@ -10,7 +10,7 @@
 
     <style>
         body {
-          background-image: url('https://img.freepik.com/free-vector/dark-polygonal-background_1409-878.jpg?w=1380&t=st=1697544418~exp=1697545018~hmac=e39efe3766894e5be7299b813d60f6f8d7f53fb2518f2cb2c0e609980d31a3c7');
+          background-image: url('https://img.freepik.com/free-vector/dark-polygonal-background_1409-878.jpg?w=1380&t=st=1697693398~exp=1697693998~hmac=d218bba93c72dc8d006811e9ae6c685801754fe2d8c6b921f104e4c472d9f480');
           background-size: cover; /* Adjust this to control the image sizing */
           background-repeat: no-repeat;
         }
